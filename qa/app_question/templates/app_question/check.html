@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+Название теста: <h2>{{ object_test.name }}</h2>
+{% if res %}
+  <div class="alert alert-success" role="alert">
+    Вы уже прошли тест ранее и можете ознакомиться с результатом, либо пройти его заново...
+  </div>
+  <a href="{% url 'result' res %}"><button type="button" class="btn btn-primary btn-lg">Результат</button></a>
+{% else %}
+  <div class="alert alert-success" role="alert">
+    Вы уже начали проходить тест и не завершили его
+  </div>
+  <a href="{% url 'play-test' pk=object_test.id %}"><button type="button" class="btn btn-primary btn-lg">Продолжить</button></a>
+{% endif %}
+<a href="{% url 'zero' pk=object_test.id %}"><button type="button" class="btn btn-secondary btn-lg">Начать сначала</button></a>
+{% endblock %}

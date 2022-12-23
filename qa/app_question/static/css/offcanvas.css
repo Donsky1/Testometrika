@@ -1,0 +1,103 @@
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+
+body {
+  padding-top: 56px;
+}
+
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+  }
+  .offcanvas-collapse.open {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+
+.nav-scroller {
+  position: relative;
+  z-index: 2;
+  height: 2.75rem;
+  overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+  display: flex;
+  flex-wrap: nowrap;
+  padding-bottom: 1rem;
+  margin-top: -1px;
+  overflow-x: auto;
+  color: rgba(255, 255, 255, .75);
+  text-align: center;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nav-underline .nav-link {
+  padding-top: .75rem;
+  padding-bottom: .75rem;
+  font-size: .875rem;
+  color: #6c757d;
+}
+
+.nav-underline .nav-link:hover {
+  color: #007bff;
+}
+
+.nav-underline .active {
+  font-weight: 500;
+  color: #343a40;
+}
+
+.bg-purple {
+  background-color: #212529;
+}
+
+a {
+  color: #333300;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #333300;
+}
+
+a:hover {
+  color: #333300;
+  text-decoration: underline;
+}
+
+p {
+  margin: 0;
+  padding: 0 0 .5em;
+}
+
+.pane-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pane-list li {
+
+  padding: 10px 20px 10px;
+  border-top: solid 1px #c4df9b;
+  cursor: pointer;
+}
+
+.pane-list li:hover {
+  background: #f6ffe9;
+}

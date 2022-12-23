@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>Результаты:</h2><hr>
+{% for question, answer_list in result.items %}
+    <div>
+        Вопрос: <h4>{{ question }}</h4>
+            <p>Вы ответили: {{ answer_list.0 }} <br>
+               Правильный ответ: {{ answer_list.1 }}</p>
+    </div>
+    <hr>
+{% endfor %}
+<hr>
+<h3>Итоги: </h3>
+<div><b>
+    Всего вопросов: {{ result_dict_val.total }}<br>
+    Кол-во правильных ответов: {{ result_dict_val.count_true }}<br>
+    Кол-во НЕправильных ответов: {{ result_dict_val.count_false }}<br>
+    Процент правильных ответов: {{ result_dict_val.percent_true_answers }} % <br>
+</b></div>
+<div style="margin-top: 20px;"><a href="{% url 'index' %}">back</a></div>
+</body>
+</html>

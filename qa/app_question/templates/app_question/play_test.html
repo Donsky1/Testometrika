@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+  Название теста: {{ object_test.name }}
+  <br>
+  <hr>
+    <form method="post">
+    {% csrf_token %}
+    <fieldset>
+        <legend><h4>Вопрос: {{ current_question }}</h4></legend>
+        {% with current_question.answers.all as answers %}
+            {% for choice in answers %}
+                {% if answers.count == 2 %}
+                    {% with type_field='radio' %}
+                        {% include 'app_question\block_form_field.html' %}
+                    {% endwith %}
+                {% else %}
+                    {% with type_field='checkbox' %}
+                        {% include 'app_question\block_form_field.html' %}
+                    {% endwith %}
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+    </fieldset>
+    <input type="text" value="{{ current_question.id }}" name="cur_question_id" hidden>
+    <input type="submit" value="Ответить" class="btn btn-secondary">
+    </form>
+{% endblock %}

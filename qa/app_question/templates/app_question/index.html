@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+{% if user.is_authenticated %}
+  {% include 'app_question\block_main.html' %}
+{% else %}
+  {% include 'app_question\block_anonymous.html' %}
+{% endif %}
+<main class="container cls_hidden" style="display: none;">
+  <div class="my-3 p-3 bg-body rounded shadow-sm"><h6 class="border-bottom pb-2 mb-0">Тесты</h6>
+    <div id="set_test"></div>
+  </div>
+</main>
+{% endblock %}

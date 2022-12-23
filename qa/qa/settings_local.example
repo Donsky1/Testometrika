@@ -1,0 +1,3 @@
+# base settings, to use project to change this params
+DEBUG = False
+ALLOWED_HOSTS = []
