@@ -7,14 +7,18 @@
 <b><i>Используется встроенный способ создания структуры БД (makemigrations, migrate). Встроенный manage.py syncdb или миграции через South (являются устаревшими)</i></b>
 <br><br><br>
 Обзор:
-<ul>
-  <li><a href='#main'>Главная страница</a></li>
-  <li><a href='#question'>Страница вопроса</a></li>
-  <li><a href='#check'>Страница проверки перед тестированием</a></li>
-  <li><a href='#result'>Страница результата пройденного теста</a></li>
-  <li><a href='#reg'>Регистрация</a></li>
-  <li><a href='#log'>Логин</a></li>
-</ul>
+<ol>
+  <li><a href='#user'>Интерфейс пользователя</a></li>
+    <ul>
+      <li><a href='#main'>Главная страница</a></li>
+      <li><a href='#question'>Страница вопроса</a></li>
+      <li><a href='#check'>Страница проверки перед тестированием</a></li>
+      <li><a href='#result'>Страница результата пройденного теста</a></li>
+      <li><a href='#reg'>Регистрация</a></li>
+      <li><a href='#log'>Логин</a></li>
+    </ul>
+    <li><a href='#admin-video'>Видео-инструкция(2 мин.). Интерфейс администратора, пользовательский интерфейс</a></li>
+  </ol>
 
 <h2 id='main'>Главная страница</h2>
 При входе на сайт, незарегистрированный пользователь увидет, следующее окно:<br>
@@ -52,3 +56,9 @@
 <br>
 <p><img src='https://github.com/Donsky1/Testometrika/blob/master/qa/testometrika/login.png' align="center"></p>
 <br>
+
+<hr>
+<h5 id='admin-video'><a href='https://youtu.be/AcoH2vu0BY8'>Видео-инструкция(2 мин.). Интерфейс администратора, пользовательский интерфейс</a></h5>
+
+<br><hr
+<h5 id='user>Назад к оглавлению</h5>
